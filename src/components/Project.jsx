@@ -23,7 +23,7 @@ function Project() {
       title:"ZyraWear",
       des:"My first react E-commerce project where I create my own api and fetch products in categories wise also login/signup page with local storage ",
       link:"https://zyrawear-project.vercel.app/",
-      img:img3,
+      img:img2,
     }
     
   ]
