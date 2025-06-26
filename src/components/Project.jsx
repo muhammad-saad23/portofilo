@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import img1 from '../assets/quick_calligraphy.jpg'
 import img2 from '../assets/electro.jpg'
-import img3 from '../assets/zyrawear.jpg'
+import img3 from '../assets/zyrawear.JPG'
 
 
 function Project() {
