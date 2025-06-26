@@ -19,12 +19,12 @@ function Project() {
       des:"My Laravel E-commerce project on 'Electro' where the user order electronic products and also admin panel integrated where products, categories user details order details are saved also total products categories are define on dashboard",
       link:"https://www.linkedin.com/posts/muhammad-saad-ab7879279_laravel-reactjs-php-activity-7258818334094204928-X5ev?utm_source=share&utm_medium=member_desktop"
     },
-    {
-      img:img3,
-      title:"ZyraWear",
-      des:"My first react E-commerce project where I create my own api and fetch products in categories wise also login/signup page with local storage ",
-      link:"https://zyrawear-project.vercel.app/",
-    }
+    // {
+    //   img:img3,
+    //   title:"ZyraWear",
+    //   des:"My first react E-commerce project where I create my own api and fetch products in categories wise also login/signup page with local storage ",
+    //   link:"https://zyrawear-project.vercel.app/",
+    // }
     
   ]
     const data=()=>{
