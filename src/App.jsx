@@ -8,17 +8,21 @@ import Skill from './components/Skill'
 import Project from './components/Project'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
+import Background from './components/Background'
 function App() {
 
   return (
-    <>
-    <Navbar/>
-    <Home/>
-    <Skill/>
-    <Project/>
-    <Contact/>
-    <Footer/>
-    </>
+    <div className="relative">
+      
+      <Background/>
+      <Navbar />
+      <Home />
+      <Skill />
+      <Project />
+      <Contact />
+      {/* <Footer /> */}
+    </div>
+
   )
 }
 

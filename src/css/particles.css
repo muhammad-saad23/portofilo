@@ -1,0 +1,24 @@
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  filter: blur(1px);
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Movement animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}

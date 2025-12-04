@@ -1,70 +1,83 @@
 import React from 'react'
 import img from '../assets/vector.png'
-import { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 function Skill() {
-    // skills
-const fronted=[        
-        {title:'HTML5'},
-        {title:'CSS3'},
-        {title:'Javascript'},
-        {title:'Bootstrap'},
-        {title:'TailwindCSS'},
-        {title:'ReactJS'},
-    ]
-    const backend=[
-      {title:"PHP"},
-      {title:"Laravel"},
-      {title:"MYSQL"}
-    ]
-    const other=[
-      {title:"Github"},
-      {title:"Netlify"}
-    ]
 
-    const data=()=>{
-      console.log(fronted)
-    }
-  
-    useEffect(()=>{
-      data();
-    })
+  const skills = [
+    { title: "HTML5", type: "frontend" },
+    { title: "CSS3", type: "frontend" },
+    { title: "Javascript", type: "frontend" },
+    { title: "Bootstrap", type: "frontend" },
+    { title: "TailwindCSS", type: "frontend" },
+    { title: "ReactJS", type: "frontend" },
+    { title: "PHP", type: "backend" },
+    { title: "Laravel", type: "backend" },
+    { title: "MYSQL", type: "backend" },
+    { title: "Github", type: "other" },
+    { title: "Netlify", type: "other" },
+  ];
+
+  // const fronted = skills.filter(skill => skill.type === "frontend");
+  // const backend = skills.filter(skill => skill.type === "backend");
+  // const other = skills.filter(skill => skill.type === "other");
+  const categories = [
+    { name: "Frontend", type: "frontend" },
+    { name: "Backend & Database", type: "backend" },
+    { name: "Others", type: "other" },
+  ];
+
+  // const data = () => {
+  //   console.log(fronted)
+  // }
+
+  // useEffect(() => {
+  //   data();
+  // })
 
   return (
     <div>
       <>
-      <section className="skills mb-10" id='skill'>
-        <h1 className="text-center text-4xl uppercase text-white mb-7" data-aos="zoom-in" data-aos-duration="1000">skills</h1>
-        <div data-aos="fade-up" data-aos-duration="1000">
-          <div className="flex justify-center flex-wrap gap-5">
-            <div className="col w-[22rem] mx-2 bg-[#201c1c] shadow-lg shadow-black lg:px-2 pb-12  rounded-md transition duration-300 ease-in-out transform hover:-translate-y-2">
-              <h1 className='text-2xl text-white ml-5 my-5'>Fronted</h1>
-              <div className="grid grid-cols-3 ml-2 gap-4 ">
-                {fronted.map((item)=>(
-                  <p className='cursor-pointer rounded-full bg-[#3c3030] text-[#d1bebe] w-fit px-3 font-[600] text-center'>{item.title}</p>
-                ))}
-              </div>
-            </div>                                                           
-            <div className="col w-[22rem] mx-2 bg-[#201c1c] shadow-lg shadow-black lg:px-2 pb-8 rounded-md transition duration-300 ease-in-out transform hover:-translate-y-2">
-              <h1 className='text-2xl text-white ml-5 my-5'>Backend & Database</h1>
-              <div className="grid grid-cols-4 ml-2 gap-4">
-                {backend.map((item)=>(
-                  <p className='cursor-pointer rounded-full bg-[#3c3030] text-[#d1bebe] w-fit px-3 font-[600] text-center'>{item.title}</p>
-                ))}
-              </div>
-            </div>                                                           
-            <div className="col w-[22rem] mx-2 bg-[#201c1c] shadow-lg shadow-black lg:px-2 pb-8 rounded-md transition duration-300 ease-in-out transform hover:-translate-y-2">
-              <h1 className='text-2xl text-white ml-5 my-5'>Others</h1>
-              <div className="grid grid-cols-4 ml-2 gap-4 ">
-                {other.map((item)=>(
-                  <p className='cursor-pointer rounded-full bg-[#3c3030] text-[#d1bebe] w-fit px-3 font-[600] text-center'>{item.title}</p>
-                ))}
-              </div>
-            </div>                                                                                                                      
-          </div>       
-        </div>
-      </section>
-      <div className="line mx-auto rounded-full w-[90%] my-5 bg-slate-500 h-2" data-aos="zoom-in"></div>
+        <section className="skills mb-16" id="skill">
+          <h1
+            className="text-center text-4xl uppercase font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-10"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
+            Skills
+          </h1>
+
+          <div
+            className="flex flex-wrap justify-center gap-8"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            {categories.map((category, idx) => {
+              const filter = skills.filter(s => s.type === category.type)
+              return (
+                <div key={idx} className="w-[22rem] bg-gradient-to-br from-[#231f2b] to-[#211e2e] shadow-lg  p-6 rounded-xl transition duration-300 transform hover:-translate-y-2 hover:shadow-indigo-700/40">
+                  <h2 className="text-2xl text-gray-300 font-semibold mb-5">{category.name}</h2>
+                  <div className="grid grid-cols-3 gap-3">
+                    {filter.map((item, index) => (
+                      <p
+                        key={item.type}
+                        className="cursor-pointer bg-gradient-to-r from-indigo-500 to-purple-500 text-gray-300 rounded-full px-3 py-1 text-sm font-semibold text-center transition hover:scale-105"
+                      >
+                        {item.title}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+
+              )
+            })}
+          </div>
+         
+
+        </section>
+
+
+        {/* <div className="line mx-auto rounded-full w-[90%] my-5 bg-slate-500 h-2" data-aos="zoom-in"></div> */}
       </>
     </div>
   )
