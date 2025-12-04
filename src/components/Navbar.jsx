@@ -1,7 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { Link } from 'react-scroll';
 function Navbar() {
   const [open,setOpen]=useState();
+  const [scrollEffect,setScrollEffect]=useState(false);
+
+  useEffect(()=>{
+    const handScroll=()=>{
+      if (window.scrollY>10) {
+        setScrollEffect(true);
+      }else{
+        setScrollEffect(false);
+      }
+    }
+    window.addEventListener("scroll",handScroll)
+    return()=>window.removeEventListener("scroll",handScroll);
+
+  },[])
 
   const link=[
     {title:'About',link:"home",offset:-200},
@@ -16,8 +30,8 @@ function Navbar() {
   } 
 
   return (
-    <div className='w-full z-10 sticky top-0 md:border-b-slate-500 py-0.5'>
-      <nav className={`text-gray-100 md:flex flex-row justify-between items-baseline mx-5 my-2`}>
+    <div className={`${scrollEffect ? "backdrop-blur-sm transition duration-700 ease-in-out bg-white/10 shadow-lg":"backdrop-blur-0 bg-transparent transition duration-300"} bg-black w-full z-10 sticky top-0 md:border-b-slate-500 py-0.5`}>
+      <nav className={` text-gray-100 md:flex flex-row justify-between items-baseline mx-5 my-2`}>
         <div className="logo font-semibold capitalize ">
           <p className='text-3xl text-shadow-lg '>Saad <span className='text-indigo-400'>Portfolio</span></p>
         </div>
