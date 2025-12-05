@@ -12,9 +12,9 @@ import { Link } from 'react-scroll'
 function App() {
 
   return (
-    <div className="relative">
+    <div className="relative poppins-regular">
       <Link to='home' spy={true} smooth={true} offset={-200} duration={1000}>
-        <i className="fixed z-10 flex justify-center items-center rounded-full bg-indigo-500 w-12 h-12 right-10 top-[50rem] cursor-pointer text-white fa-solid fa-arrow-up"></i>
+        <i className="fixed z-50 flex justify-center items-center rounded-full bg-indigo-500 w-12 h-12 right-6 bottom-6 cursor-pointer text-white fa-solid fa-arrow-up"></i>
       </Link>
 
       <Background />
