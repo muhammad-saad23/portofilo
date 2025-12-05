@@ -9,7 +9,7 @@ function Skill() {
     { title: "CSS3", type: "frontend" },
     { title: "Javascript", type: "frontend" },
     { title: "Bootstrap", type: "frontend" },
-    { title: "TailwindCSS", type: "frontend" },
+    { title: "Tailwind", type: "frontend" },
     { title: "ReactJS", type: "frontend" },
     { title: "PHP", type: "backend" },
     { title: "Laravel", type: "backend" },
@@ -18,9 +18,7 @@ function Skill() {
     { title: "Netlify", type: "other" },
   ];
 
-  // const fronted = skills.filter(skill => skill.type === "frontend");
-  // const backend = skills.filter(skill => skill.type === "backend");
-  // const other = skills.filter(skill => skill.type === "other");
+
   const categories = [
     { name: "Frontend", type: "frontend" },
     { name: "Backend & Database", type: "backend" },
@@ -36,15 +34,14 @@ function Skill() {
   // })
 
   return (
-    <div>
+    <div >
       <>
-        <section className="skills mb-16" id="skill">
+        <section className="skills mb-40" id="skill">
           <h1
-            className="text-center text-4xl uppercase font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-10"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
+            className="text-center text-4xl capitalize font-bold tracking-wide text-transparent bg-clip-text text-white mb-10"
+            
           >
-            Skills
+           My Skills
           </h1>
 
           <div

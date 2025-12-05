@@ -18,11 +18,11 @@ function Home(props) {
   }
 
   return (
-    <div>
+    <div className='mb-40'>
       <>
         <section
           id="home"
-          className="flex justify-center items-center min-h-[75vh] md:mx-10"
+          className="flex justify-center items-center min-h-[75vh]  md:mx-10"
         >
           <div
             data-aos="fade-up"

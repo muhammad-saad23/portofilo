@@ -48,15 +48,13 @@ function Project() {
   })
 
   return (
-    <div>
+    <div className='mb-40'>
       <>
         <section className="project mb-16" id="project">
           <h1
-            className="text-center text-4xl uppercase font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-12"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
+            className="text-center text-4xl capitalize font-bold tracking-wide text-transparent bg-clip-text text-white mb-12"            
           >
-            Projects
+            Featured Projects
           </h1>
 
           <div
